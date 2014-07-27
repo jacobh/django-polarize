@@ -1,4 +1,4 @@
-django-generic-ratings
+django-polarize
 ======================
 
-Generic Rating System for Django
+Generic ratings app for Django
