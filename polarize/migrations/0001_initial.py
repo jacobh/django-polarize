@@ -18,19 +18,19 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         # Adding model 'Rating'
-        db.create_table(u'generic_ratings_rating', (
+        db.create_table(u'polarize_rating', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('direction', self.gf('django.db.models.fields.CharField')(max_length=4)),
             ('target_content_type', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['contenttypes.ContentType'])),
             ('target_object_id', self.gf('django.db.models.fields.PositiveIntegerField')()),
             ('user', self.gf('django.db.models.fields.related.ForeignKey')(to=orm[user_model_string])),
         ))
-        db.send_create_signal(u'generic_ratings', ['Rating'])
+        db.send_create_signal(u'polarize', ['Rating'])
 
 
     def backwards(self, orm):
         # Deleting model 'Rating'
-        db.delete_table(u'generic_ratings_rating')
+        db.delete_table(u'polarize_rating')
 
 
     models = {
@@ -44,7 +44,7 @@ class Migration(SchemaMigration):
             'model': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         },
-        u'generic_ratings.rating': {
+        u'polarize.rating': {
             'Meta': {'object_name': 'Rating'},
             'direction': ('django.db.models.fields.CharField', [], {'max_length': '4'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -54,4 +54,4 @@ class Migration(SchemaMigration):
         }
     }
 
-    complete_apps = ['generic_ratings']
+    complete_apps = ['polarize']

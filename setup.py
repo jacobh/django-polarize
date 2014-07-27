@@ -8,7 +8,7 @@ setup(
     description='Generic ratings app for Django',
     author='Jacob Haslehurst',
     author_email='jacob@haslehurst.net',
-    url='https://github.com/hzy/django-generic-ratings',
+    url='https://github.com/hzy/django-polarize',
     packages=find_packages(exclude=['tests']),
     install_requires=['django', 'south']
 )

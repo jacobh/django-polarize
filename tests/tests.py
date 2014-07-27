@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 from django.test import TestCase
 from django.contrib.auth.models import User
 
-from generic_ratings.models import Rating
+from polarize.models import Rating
 from .models import TextSnippet
 
 
