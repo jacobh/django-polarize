@@ -16,3 +16,5 @@ class RatingTargetMixin(object):
         output = {'up': 0, 'down': 0}
         for rating in ratings:
             output[rating.direction] += 1
+
+        return output
