@@ -10,5 +10,5 @@ setup(
     author_email='jacob@haslehurst.net',
     url='https://github.com/hzy/django-polarize',
     packages=find_packages(exclude=['tests']),
-    install_requires=['django', 'south']
+    install_requires=['django>=1.5', 'south>=1.0']
 )
