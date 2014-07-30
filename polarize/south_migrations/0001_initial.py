@@ -3,13 +3,9 @@ from south.utils import datetime_utils as datetime
 from south.db import db
 from south.v2 import SchemaMigration
 from django.db import models
+from django.contrib.auth import get_user_model
 
-try:
-    from django.contrib.auth import get_user_model
-except ImportError: # django < 1.5
-    from django.contrib.auth.models import User
-else:
-    User = get_user_model()
+User = get_user_model()
 
 user_model_string = "{}.{}".format(User._meta.app_label, User._meta.object_name)
 

@@ -15,4 +15,4 @@ class Rating(models.Model):
     target_object = generic.GenericForeignKey(
         'target_content_type', 'target_object_id'
     )
-    user = models.ForeignKey(getattr(settings, 'AUTH_USER_MODEL', 'auth.User'))
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
